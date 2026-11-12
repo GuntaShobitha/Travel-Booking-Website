@@ -16,7 +16,7 @@
       propertyCount: 48,
       startingPrice: 340,
       bestSeason: 'May – Oct',
-      image: 'assets/images/dest-santorini.jpg',
+      image: 'assets/images/dest-santorini.webp',
       alt: 'Whitewashed cliffside village in Santorini overlooking the Aegean Sea at sunset'
     },
     {
@@ -29,7 +29,7 @@
       propertyCount: 62,
       startingPrice: 245,
       bestSeason: 'Mar – May, Oct – Nov',
-      image: 'assets/images/dest-kyoto.jpg',
+      image: 'assets/images/dest-kyoto.webp',
       alt: 'Peaceful Kyoto bamboo grove path with traditional wooden temple roofs in morning light'
     },
     {
@@ -42,7 +42,7 @@
       propertyCount: 54,
       startingPrice: 375,
       bestSeason: 'May – Sep',
-      image: 'assets/images/dest-amalfi.jpg',
+      image: 'assets/images/dest-amalfi.webp',
       alt: 'Pastel cliffside town on the Amalfi Coast above turquoise Mediterranean water'
     },
     {
@@ -55,7 +55,7 @@
       propertyCount: 36,
       startingPrice: 290,
       bestSeason: 'Dec – Mar, Jul – Sep',
-      image: 'assets/images/dest-zermatt.jpg',
+      image: 'assets/images/dest-zermatt.webp',
       alt: 'Snow-capped Matterhorn rising over alpine wooden chalets in Zermatt at twilight'
     },
     {
@@ -68,7 +68,7 @@
       propertyCount: 71,
       startingPrice: 175,
       bestSeason: 'Apr – Oct',
-      image: 'assets/images/dest-bali.jpg',
+      image: 'assets/images/dest-bali.webp',
       alt: 'Lush emerald rice terraces and misty palm valley in Ubud Bali at sunrise'
     },
     {
@@ -81,7 +81,7 @@
       propertyCount: 44,
       startingPrice: 230,
       bestSeason: 'Mar – May, Oct – Nov',
-      image: 'assets/images/dest-marrakech.jpg',
+      image: 'assets/images/dest-marrakech.webp',
       alt: 'Sunlit Moroccan riad courtyard with geometric zellige fountain and orange trees'
     },
     {
@@ -94,7 +94,7 @@
       propertyCount: 19,
       startingPrice: 740,
       bestSeason: 'Nov – Mar',
-      image: 'assets/images/dest-patagonia.jpg',
+      image: 'assets/images/dest-patagonia.webp',
       alt: 'Granite peaks of Torres del Paine reflected in a turquoise glacial lake in Patagonia'
     },
     // {
@@ -127,7 +127,7 @@
       badge: 'Guest Favorite',
       amenities: ['Infinity Pool', 'Breakfast Included', 'Sea View Terrace'],
       description: 'Carved directly into volcanic cliffs with heated private plunge pools and unobstructed caldera sunsets.',
-      image: 'assets/images/hotel-1.jpg',
+      image: 'assets/images/hotel-1.webp',
       alt: 'Caldera Horizon Suites cliffside plunge pool overlooking the Aegean Sea at sunset'
     },
     {
@@ -143,7 +143,7 @@
       badge: 'Boutique Pick',
       amenities: ['Plunge Pool', 'Sunset Veranda', 'Island Concierge'],
       description: 'Vaulted Cycladic cave suites dressed in raw linen and natural travertine above quiet Aegean waters.',
-      image: 'assets/images/hotel-2.jpg',
+      image: 'assets/images/hotel-2.webp',
       alt: 'Oia Limestone Retreat arched white Cycladic cave suite opening onto a sunlit terrace'
     },
     {
@@ -159,7 +159,7 @@
       badge: 'Top Rated',
       amenities: ['Private Onsen', 'Kaiseki Dining', 'Bamboo Garden'],
       description: 'Hinoki cedar suites beside serene bamboo groves featuring private mineral soaking baths and seasonal dining.',
-      image: 'assets/images/hotel-3.jpg',
+      image: 'assets/images/hotel-3.webp',
       alt: 'Arashiyama Kaze Ryokan cedar suite with private steaming stone onsen bath'
     },
     {
@@ -175,7 +175,7 @@
       badge: 'Great Value',
       amenities: ['Tea Lounge', 'Moss Courtyard', 'Central Walk'],
       description: 'Restored machiya townhouse steps from historic shrines, complete with an atmospheric evening tea room.',
-      image: 'assets/images/dest-kyoto.jpg',
+      image: 'assets/images/dest-kyoto.webp',
       alt: 'Higashiyama Lantern House tranquil bamboo and temple garden sanctuary in Kyoto'
     },
     {
@@ -191,7 +191,7 @@
       badge: 'Signature Stay',
       amenities: ['Infinity Pool', 'Private Boat', 'Coastal Dining'],
       description: 'Seventeenth-century coastal estate draped in olive terraces with panoramic Tyrrhenian infinity pool.',
-      image: 'assets/images/hero-coastal.jpg',
+      image: 'assets/images/hero-coastal.webp',
       alt: 'Villa Solara Ravello cliffside limestone infinity pool overlooking the sea at sunset'
     },
     {
@@ -207,7 +207,7 @@
       badge: 'Seafront',
       amenities: ['Beach Access', 'Lemon Terrace', 'Aperitivo Bar'],
       description: 'Hand-painted Vietri tile suites perched minutes above Spiaggia Grande with sunset cocktail terraces.',
-      image: 'assets/images/dest-amalfi.jpg',
+      image: 'assets/images/dest-amalfi.webp',
       alt: 'Positano Azure Boutique pastel cliffside terrace framed by lemon branches and blue bay'
     },
     {
@@ -223,7 +223,7 @@
       badge: 'Ski-In / Ski-Out',
       amenities: ['Thermal Spa', 'Panoramic Hearth', 'Private Ski Room'],
       description: 'Timber-and-glass alpine sanctuary framing uninterrupted views of the Matterhorn from every suite.',
-      image: 'assets/images/hotel-7.jpg',
+      image: 'assets/images/hotel-7.webp',
       alt: 'Matterhorn Glass Chalet glowing warmly in twilight snow below alpine peaks'
     },
     {
@@ -239,7 +239,7 @@
       badge: 'Cozy Chalet',
       amenities: ['Pine Sauna', 'Breakfast Included', 'Rail Access'],
       description: 'Warm larch-wood interiors, crackling stone fireplaces, and effortless access to scenic mountain railways.',
-      image: 'assets/images/dest-zermatt.jpg',
+      image: 'assets/images/dest-zermatt.webp',
       alt: 'Alpine Timber Refuge nestled beneath the snow-capped Matterhorn at twilight'
     },
     {
@@ -255,7 +255,7 @@
       badge: 'Wellness Pick',
       amenities: ['Rice Terrace View', 'Holistic Spa', 'Yoga Pavilion'],
       description: 'Cantilevered rainforest villas floating above emerald rice terraces with open-air teak soaking tubs.',
-      image: 'assets/images/dest-bali.jpg',
+      image: 'assets/images/dest-bali.webp',
       alt: 'Sayan Canopy Sanctuary overlooking misty emerald rice terraces in Ubud Bali'
     },
     {
@@ -271,7 +271,7 @@
       badge: 'Design Gem',
       amenities: ['Hammam Spa', 'Courtyard Fountain', 'Rooftop Lanterns'],
       description: 'Intimate courtyard sanctuary adorned with artisan mosaic tiles, citrus trees, and candlelit rooftop dining.',
-      image: 'assets/images/dest-marrakech.jpg',
+      image: 'assets/images/dest-marrakech.webp',
       alt: 'Riad Zellige Palmeraie sunlit Moroccan courtyard with zellige fountain and orange trees'
     },
     {
@@ -287,7 +287,7 @@
       badge: 'All-Inclusive',
       amenities: ['Guided Treks', 'Glacier View', 'Gourmet Dining'],
       description: 'Architectural timber-and-glass outpost perched beside glacial waters with expert naturalist excursions.',
-      image: 'assets/images/dest-patagonia.jpg',
+      image: 'assets/images/dest-patagonia.webp',
       alt: 'Fjord & Glacier Lodge overlooking Torres del Paine peaks and turquoise glacial lake'
     },
     {
@@ -303,8 +303,7 @@
       badge: 'Aurora View',
       amenities: ['Mineral Lagoon', 'Aurora Wake-Up', 'Nordic Kitchen'],
       description: 'Minimalist basalt architecture built directly onto steaming silica lagoons beneath northern lights skies.',
-      image: 'https://images.unsplash.com/photo-1529963183134-61a90db47eaf?auto=format&fit=crop&w=1200&q=80',
-      fallbackImage: 'assets/images/hotel-7.jpg',
+      image: 'assets/images/hotel-13.webp',
       alt: 'Skylight Geothermal Spa Hotel beneath glowing Icelandic northern lights skies'
     }
   ];
