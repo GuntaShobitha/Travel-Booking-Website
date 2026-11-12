@@ -1,0 +1,451 @@
+/* ==========================================================================
+   Solara Travel Booking — 404 Page Styles
+   ========================================================================== */
+
+/* ---- Not-found hero ---- */
+.notfound-hero {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  padding-top: calc(var(--header-height) + 64px);
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  overflow: visible;
+}
+
+.notfound-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.notfound-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: scale(1.04);
+}
+
+.notfound-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 27, 36, 0.66) 0%,
+    rgba(13, 27, 36, 0.5) 45%,
+    rgba(13, 27, 36, 0.84) 100%
+  );
+}
+
+.notfound-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 36px;
+}
+
+.notfound-copy {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.notfound-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.28);
+}
+
+.notfound-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.14rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+/* ---- Not-found card (search + quick links) ---- */
+.notfound-card {
+  width: 100%;
+  max-width: 620px;
+  background-color: var(--bg-surface);
+  color: var(--ink-primary);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.notfound-search-form {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.notfound-search-form .search-field {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.notfound-search-btn {
+  flex: 0 0 auto;
+  padding-inline: 26px;
+  border-radius: var(--radius-md);
+  font-size: 0.98rem;
+  min-height: 52px;
+}
+
+.notfound-quick-links {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-link-label {
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 4px;
+}
+
+.quick-link {
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-surface-alt);
+  color: var(--ink-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.quick-link:hover {
+  background-color: var(--brand-primary);
+  color: #ffffff;
+  border-color: var(--brand-primary);
+}
+
+/* ---- Compass illustration ---- */
+.notfound-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.notfound-compass {
+  position: relative;
+  width: clamp(160px, 22vw, 220px);
+  height: clamp(160px, 22vw, 220px);
+  border-radius: 50%;
+}
+
+.compass-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  place-items: center;
+  gap: 0;
+}
+
+.compass-n,
+.compass-s,
+.compass-e,
+.compass-w {
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.04em;
+  z-index: 2;
+}
+
+.compass-n {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.compass-s {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.compass-e {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.compass-w {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.compass-needle {
+  position: absolute;
+  inset: 14%;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 1;
+}
+
+.needle-n {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38%;
+  height: 44%;
+  background: var(--brand-accent);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 4px 14px rgba(201, 106, 66, 0.55);
+}
+
+.needle-s {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38%;
+  height: 44%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 45% 45% 50% 50%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.compass-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(14px, 2.2vw, 20px);
+  height: clamp(14px, 2.2vw, 20px);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35);
+  z-index: 3;
+}
+
+/* ---- Header CTA button on 404 ---- */
+.header-cta {
+  padding-inline: 18px;
+  font-size: 0.88rem;
+  height: 42px;
+}
+
+/* ---- Responsive: large screens ---- */
+@media (min-width: 1121px) {
+  .notfound-search-form {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ---- Responsive: tablet / smaller ---- */
+@media (max-width: 760px) {
+  .notfound-hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 36px);
+    padding-bottom: 60px;
+  }
+
+  .notfound-content {
+    gap: 28px;
+  }
+
+  .notfound-card {
+    padding: 18px;
+  }
+
+  .compass-ring {
+    box-shadow:
+      0 0 0 4px rgba(255, 255, 255, 0.08),
+      inset 0 0 0 4px rgba(255, 255, 255, 0.08),
+      0 14px 36px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* ---- Responsive: mobile ---- */
+@media (max-width: 580px) {
+  .notfound-search-form {
+    flex-direction: column;
+  }
+
+  .notfound-search-form .search-field {
+    flex: 1 1 auto;
+  }
+
+  .notfound-search-btn {
+    width: 100%;
+  }
+
+  .notfound-quick-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quick-link {
+    width: 100%;
+    text-align: center;
+    max-width: 280px;
+  }
+}
+
+/* ---- Respect reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .needle-n,
+  .needle-s,
+  .compass-ring {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+
+/* ==========================================
+   404 ERROR PAGE - ACTION BUTTONS
+========================================== */
+
+.error-actions-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+/* Common Button Styles */
+.btn-404 {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 175px;
+    padding: 15px 26px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* SVG Icons */
+.btn-404 svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+}
+
+/* Go Back - Outline Button */
+.btn-404-outline {
+    color: #d6a84f;
+    background: transparent;
+    border: 1.5px solid #d6a84f;
+}
+
+.btn-404-outline:hover {
+    color: #151515;
+    background: #d6a84f;
+    border-color: #d6a84f;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(214, 168, 79, 0.25);
+}
+
+.btn-404-outline:hover svg {
+    transform: translateX(-5px);
+}
+
+/* Back to Home - Gold Button */
+.btn-404-gold {
+    color: #171717;
+    background: linear-gradient(135deg, #e6c477, #c99a3d);
+    border: 1.5px solid #d6ad5b;
+    box-shadow: 0 5px 15px rgba(201, 154, 61, 0.18);
+}
+
+.btn-404-gold:hover {
+    color: #111;
+    background: linear-gradient(135deg, #f2d99b, #ddb65e);
+    border-color: #f2d99b;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(214, 168, 79, 0.35);
+}
+
+.btn-404-gold:hover svg {
+    transform: scale(1.12);
+}
+
+/* Active / Click Effect */
+.btn-404:active {
+    transform: translateY(-1px) scale(0.97);
+}
+
+/* Keyboard Accessibility */
+.btn-404:focus-visible {
+    outline: 3px solid rgba(214, 168, 79, 0.45);
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .error-actions-group {
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .btn-404 {
+        width: 100%;
+        max-width: 260px;
+        min-width: unset;
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-404,
+    .btn-404 svg {
+        transition: none;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="404 - Off the Trail. You have wandered into uncharted wilderness. STACKLY Outdoor & Camping." />
+  <meta name="theme-color" content="#102A24" />
+    <title>Page Not Found — Solara</title>
+
+    <!-- Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/404.css" />
+  </head>
+  <body>
+    <!-- ===================================================================
+         Header & Navigation (shared with site)
+         =================================================================== -->
+  
+
+    <!-- ===================================================================
+         404 Page Content
+         =================================================================== -->
+    <main id="top">
+      <section class="notfound-hero" aria-labelledby="notfoundTitle">
+        <div class="notfound-media" aria-hidden="true">
+          <img
+            src="assets/images/hero-coastal.webp"
+            alt=""
+            class="notfound-bg-img"
+          />
+          <div class="notfound-scrim"></div>
+        </div>
+
+        <div class="container notfound-content">
+          <div class="notfound-copy">
+            <span class="section-eyebrow">404 · Page Not Found</span>
+            <h2 class="notfound-title">404</h2>
+            <h1 id="notfoundTitle" class="notfound-title">
+              This destination isn't on the map.
+            </h1>
+            <p class="notfound-subtitle">
+              The page you were looking for has either moved, been removed, or never existed. Let's get you back to somewhere worth staying.
+            </p>
+          </div>
+
+          <div class="error-actions-group">
+          <!-- Button 1: Go Back -->
+          <button type="button" class="btn-404 btn-404-outline" onclick="window.history.back()" aria-label="Go back to previous page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Go Back</span>
+          </button>
+
+          <!-- Button 2: Back to Home -->
+          <a href="index.html" class="btn-404 btn-404-gold" id="backToHomeBtn" aria-label="Return to basecamp home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+         
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         Footer (shared with site)
+         =================================================================== -->
+    
+
+    <!-- Mobile menu behavior (shared, lightweight) -->
+    <script>
+      (function () {
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const backdrop = document.getElementById('mobileNavBackdrop');
+        const panel = document.getElementById('mobileNavPanel');
+        const closeBtn = document.getElementById('mobileNavCloseBtn');
+        const allPanelLinks = panel.querySelectorAll('.mobile-nav-link');
+
+        function openPanel() {
+          backdrop.classList.add('is-open');
+          panel.classList.add('is-open');
+          panel.setAttribute('aria-hidden', 'false');
+          backdrop.setAttribute('aria-hidden', 'false');
+          menuBtn.setAttribute('aria-expanded', 'true');
+          document.body.classList.add('no-scroll');
+        }
+
+        function closePanel() {
+          backdrop.classList.remove('is-open');
+          panel.classList.remove('is-open');
+          panel.setAttribute('aria-hidden', 'true');
+          backdrop.setAttribute('aria-hidden', 'true');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('no-scroll');
+        }
+
+        function handleToggle() {
+          if (panel.classList.contains('is-open')) {
+            closePanel();
+          } else {
+            openPanel();
+          }
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', handleToggle);
+        if (closeBtn) closeBtn.addEventListener('click', closePanel);
+        if (backdrop) backdrop.addEventListener('click', closePanel);
+        allPanelLinks.forEach(function (link) {
+          link.addEventListener('click', closePanel);
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && panel.classList.contains('is-open')) {
+            closePanel();
+            menuBtn.focus();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
