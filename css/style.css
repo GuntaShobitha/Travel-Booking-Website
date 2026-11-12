@@ -58,6 +58,27 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  gap: 20px;
+}
+
+.brand-mark-logo {
+  height: 40px;
+  width : 140px;
+  background-size: cover;
+  filter : invert(1) brightness(0);
+}
+
+.brand-mark-logo-footer{
+  height: 40px;
+  width : 140px;
+  background-size: cover;
+  filter : brightness(0) invert(1);
+}
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -196,8 +217,9 @@ section[id] {
     border-color var(--transition-base), color var(--transition-base);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   background: linear-gradient(180deg, rgba(16, 26, 33, 0.56) 0%, rgba(16, 26, 33, 0.18) 100%);
-  backdrop-filter: blur(8px);
-  color: #ffffff;
+  /* backdrop-filter: blur(8px); */
+  color: #000;
+  background-color: #fff;
 }
 
 .site-header.is-scrolled {
@@ -1693,6 +1715,7 @@ input[type='date'].search-input {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   gap: 14px;
 }
 

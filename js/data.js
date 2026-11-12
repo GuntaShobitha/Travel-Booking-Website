@@ -97,20 +97,20 @@
       image: 'assets/images/dest-patagonia.jpg',
       alt: 'Granite peaks of Torres del Paine reflected in a turquoise glacial lake in Patagonia'
     },
-    {
-      id: 'reykjavik',
-      name: 'Reykjavik',
-      country: 'Iceland',
-      region: 'Europe',
-      style: 'Wellness & Nature',
-      tagline: 'Mineral geothermal lagoons & Nordic aurora skies',
-      propertyCount: 28,
-      startingPrice: 410,
-      bestSeason: 'Sep – Mar, Jun – Aug',
-      image: 'https://images.unsplash.com/photo-1509592149645-b62eeb60ca91?auto=format&fit=crop&w=1200&q=80',
-      fallbackImage: 'assets/images/dest-patagonia.jpg',
-      alt: 'Steaming mineral blue geothermal lagoon framed by dark volcanic basalt in Iceland'
-    }
+    // {
+    //   id: 'reykjavik',
+    //   name: 'Reykjavik',
+    //   country: 'Iceland',
+    //   region: 'Europe',
+    //   style: 'Wellness & Nature',
+    //   tagline: 'Mineral geothermal lagoons & Nordic aurora skies',
+    //   propertyCount: 28,
+    //   startingPrice: 410,
+    //   bestSeason: 'Sep – Mar, Jun – Aug',
+    //   image: 'https://images.unsplash.com/photo-1509592149645-b62eeb60ca91?auto=format&fit=crop&w=1200&q=80',
+    //   fallbackImage: 'assets/images/dest-patagonia.jpg',
+    //   alt: 'Steaming mineral blue geothermal lagoon framed by dark volcanic basalt in Iceland'
+    // }
   ];
 
   const HOTELS = [
