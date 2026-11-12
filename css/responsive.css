@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Solara Travel Booking — Responsive Breakpoints (Tablet & Mobile)
+   ========================================================================== */
+
+@media (max-width: 1120px) {
+  .search-form {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+
+  .search-field--guests {
+    grid-column: span 2;
+  }
+
+  .search-submit-btn {
+    grid-column: span 1;
+    min-height: 52px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hotel-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hotel-toolbar .toolbar-reset-wrap {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hotels-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .header-promo-pill {
+    display: none;
+  }
+
+  .newsletter-box {
+    grid-template-columns: 1fr;
+    padding: 36px 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding-block: 64px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 32px);
+    padding-bottom: 48px;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .search-field--guests,
+  .search-submit-btn {
+    grid-column: auto;
+  }
+
+  .guest-popover {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .modal-controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .wishlist-trigger span.wishlist-label {
+    display: none;
+  }
+
+  .destinations-grid,
+  .hotels-grid,
+  .why-grid,
+  .hotel-toolbar,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-toolbar .toolbar-reset-wrap {
+    grid-column: auto;
+    justify-content: stretch;
+  }
+
+  .hotel-toolbar .toolbar-reset-wrap .btn {
+    width: 100%;
+  }
+
+  .newsletter-input-row,
+  .modal-coupon-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-estimate-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hotel-estimate-panel .btn {
+    width: 100%;
+  }
+
+  .offer-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .coupon-code-box {
+    justify-content: space-between;
+  }
+
+  .toast-region {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .toast-pill {
+    justify-content: center;
+  }
+}

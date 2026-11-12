@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solara curates architectural boutique hotels, cliffside villas, alpine chalets, and cultural sanctuaries with live transparent booking price estimation."
+    />
+    <title>Solara — Curated Boutique Stays & Travel Booking</title>
+
+    <!-- Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- ===================================================================
+         Header & Navigation
+         =================================================================== -->
+    <header id="siteHeader" class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand-logo" aria-label="Solara Homepage">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </span>
+          <span>Solara</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary Navigation">
+          <a href="#destinations" class="nav-link">Destinations</a>
+          <a href="#hotels" class="nav-link">Featured Stays</a>
+          <a href="#offers" class="nav-link">Special Offers</a>
+          <a href="#why-us" class="nav-link">Why Solara</a>
+          <a href="#testimonials" class="nav-link">Reviews</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            id="headerPromoPill"
+            class="header-promo-pill"
+            hidden
+            title="Click to remove active promo code"
+          ></button>
+
+          <button
+            type="button"
+            id="wishlistOpenBtn"
+            class="wishlist-trigger"
+            aria-label="Open saved wishlist"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+            </svg>
+            <span class="wishlist-label">Wishlist</span>
+            <span id="wishlistCount" class="wishlist-count">0</span>
+          </button>
+
+          <button
+            type="button"
+            id="mobileMenuBtn"
+            class="mobile-menu-btn"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavPanel"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNavBackdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+    <aside
+      id="mobileNavPanel"
+      class="mobile-nav-panel"
+      aria-label="Mobile Navigation"
+      aria-hidden="true"
+    >
+      <div class="mobile-nav-header">
+        <span class="brand-logo" style="font-size: 1.3rem;">
+          <span class="brand-mark" aria-hidden="true" style="width: 28px; height: 28px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+            </svg>
+          </span>
+          <span>Solara</span>
+        </span>
+        <button type="button" id="mobileNavCloseBtn" class="close-icon-btn" aria-label="Close navigation menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#destinations" class="mobile-nav-link">Popular Destinations</a>
+        <a href="#hotels" class="mobile-nav-link">Featured Hotels</a>
+        <a href="#offers" class="mobile-nav-link">Special Offers</a>
+        <a href="#why-us" class="mobile-nav-link">Why Choose Us</a>
+        <a href="#testimonials" class="mobile-nav-link">Traveler Stories</a>
+        <a href="#newsletter" class="mobile-nav-link">Newsletter</a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <button type="button" id="mobileWishlistBtn" class="btn btn-secondary">
+          View Saved Wishlist
+        </button>
+        <a href="#hotels" class="btn btn-primary mobile-nav-cta">Browse All Stays</a>
+      </div>
+    </aside>
+
+    <!-- ===================================================================
+         Main Content
+         =================================================================== -->
+    <main id="top">
+      <!-- Hero Section with Destination Search -->
+      <section class="hero" aria-label="Destination search hero">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="assets/images/hero-coastal.jpg"
+            alt="Sunlit Mediterranean cliffside infinity pool overlooking turquoise sea at golden hour"
+            class="hero-bg-img"
+          />
+          <div class="hero-scrim"></div>
+        </div>
+
+        <div class="container hero-content">
+          <div class="hero-copy" data-aos="fade-up">
+            <span class="hero-eyebrow">Curated Boutique Collection · 2026</span>
+            <h1 class="hero-title">Stay somewhere worth traveling for.</h1>
+            <p class="hero-subtitle">
+              Discover architectural cliffside suites, serene forest ryokans, and alpine lodges with transparent real-time price estimation and zero hidden resort fees.
+            </p>
+          </div>
+
+          <div class="search-card" data-aos="fade-up" data-aos-delay="120">
+            <form id="heroSearchForm" class="search-form" novalidate>
+              <!-- Destination Field -->
+              <div class="search-field" id="destinationField">
+                <label for="destinationInput" class="search-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Destination
+                </label>
+                <div class="search-input-wrap">
+                  <input
+                    type="text"
+                    id="destinationInput"
+                    class="search-input"
+                    placeholder="Where are you going?"
+                    autocomplete="off"
+                    aria-autocomplete="list"
+                    aria-controls="destinationSuggestions"
+                  />
+                  <button
+                    type="button"
+                    id="clearDestinationBtn"
+                    class="input-clear-btn"
+                    aria-label="Clear destination"
+                    hidden
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div
+                  id="destinationSuggestions"
+                  class="destination-suggestions"
+                  role="listbox"
+                  hidden
+                ></div>
+              </div>
+
+              <!-- Check-in Date -->
+              <div class="search-field" id="checkInField">
+                <label for="checkInInput" class="search-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  Check-in
+                </label>
+                <input type="date" id="checkInInput" class="search-input" />
+              </div>
+
+              <!-- Check-out Date -->
+              <div class="search-field" id="checkOutField">
+                <label for="checkOutInput" class="search-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  Check-out
+                </label>
+                <input type="date" id="checkOutInput" class="search-input" />
+              </div>
+
+              <!-- Guests & Rooms Selector -->
+              <div class="search-field search-field--guests" id="guestsField">
+                <span class="search-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Guests &amp; Rooms
+                </span>
+                <button
+                  type="button"
+                  id="guestTriggerBtn"
+                  class="guest-trigger-btn"
+                  aria-expanded="false"
+                  aria-controls="guestPopover"
+                >
+                  <span id="guestSummaryText">2 Guests &middot; 1 Room</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+
+                <div id="guestPopover" class="guest-popover" hidden>
+                  <div class="stepper-row">
+                    <div class="stepper-info">
+                      <strong>Adults</strong>
+                      <span>Ages 13+</span>
+                    </div>
+                    <div class="stepper-controls">
+                      <button type="button" class="stepper-btn" data-guest-control="adults" data-action="dec" aria-label="Decrease adults">&minus;</button>
+                      <span id="adultsValue" class="stepper-value">2</span>
+                      <button type="button" class="stepper-btn" data-guest-control="adults" data-action="inc" aria-label="Increase adults">+</button>
+                    </div>
+                  </div>
+
+                  <div class="stepper-row">
+                    <div class="stepper-info">
+                      <strong>Children</strong>
+                      <span>Ages 2 – 12</span>
+                    </div>
+                    <div class="stepper-controls">
+                      <button type="button" class="stepper-btn" data-guest-control="children" data-action="dec" aria-label="Decrease children">&minus;</button>
+                      <span id="childrenValue" class="stepper-value">0</span>
+                      <button type="button" class="stepper-btn" data-guest-control="children" data-action="inc" aria-label="Increase children">+</button>
+                    </div>
+                  </div>
+
+                  <div class="stepper-row">
+                    <div class="stepper-info">
+                      <strong>Rooms</strong>
+                      <span>2 guests included per room</span>
+                    </div>
+                    <div class="stepper-controls">
+                      <button type="button" class="stepper-btn" data-guest-control="rooms" data-action="dec" aria-label="Decrease rooms">&minus;</button>
+                      <span id="roomsValue" class="stepper-value">1</span>
+                      <button type="button" class="stepper-btn" data-guest-control="rooms" data-action="inc" aria-label="Increase rooms">+</button>
+                    </div>
+                  </div>
+
+                  <p class="popover-note">
+                    Extra guests beyond 2 per room add $35/night in live estimates. Rooms cannot exceed adults.
+                  </p>
+
+                  <button type="button" id="guestDoneBtn" class="btn btn-primary btn-sm">
+                    Apply Selection
+                  </button>
+                </div>
+              </div>
+
+              <!-- Search Submit -->
+              <button type="submit" class="btn btn-primary search-submit-btn">
+                Search Stays
+              </button>
+            </form>
+
+            <div class="search-feedback-bar">
+              <div id="searchValidationMsg" class="search-validation-msg" role="status" aria-live="polite">
+                3 nights selected &middot; Instant rate estimator active
+              </div>
+              <div class="hero-quick-chips" aria-label="Popular quick searches">
+                <span class="quick-chip-label">Trending:</span>
+                <button type="button" class="quick-chip" data-quick-dest="santorini">Santorini</button>
+                <button type="button" class="quick-chip" data-quick-dest="kyoto">Kyoto</button>
+                <button type="button" class="quick-chip" data-quick-dest="amalfi">Amalfi Coast</button>
+                <button type="button" class="quick-chip" data-quick-dest="bali">Ubud, Bali</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Destinations -->
+      <section id="destinations" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div>
+              <span class="section-eyebrow">Popular Destinations</span>
+              <h2 class="section-title">Eight landscapes, curated by mood</h2>
+              <p class="section-subtitle">
+                Filter by region or select any destination card to inspect available boutique stays and instant trip totals.
+              </p>
+            </div>
+
+            <div id="regionFilters" class="filter-pills" role="group" aria-label="Filter destinations by region">
+              <button type="button" class="filter-pill is-active" data-region="All">All Regions</button>
+              <button type="button" class="filter-pill" data-region="Europe">Europe</button>
+              <button type="button" class="filter-pill" data-region="Asia">Asia</button>
+              <button type="button" class="filter-pill" data-region="Americas">Americas</button>
+              <button type="button" class="filter-pill" data-region="Africa">Africa</button>
+            </div>
+          </div>
+
+          <div id="destinationsGrid" class="destinations-grid"></div>
+        </div>
+      </section>
+
+      <!-- Featured Hotels -->
+      <section id="hotels" class="section section-alt">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div>
+              <span class="section-eyebrow">Featured Stays</span>
+              <h2 class="section-title">Handpicked hotels &amp; live trip estimates</h2>
+              <p class="section-subtitle">
+                Compare verified properties with dynamic booking totals calculated for your exact nights, rooms, guest count, and active coupon.
+              </p>
+            </div>
+          </div>
+
+          <!-- Active Search Context Banner -->
+          <div id="tripContextBanner" class="trip-context-banner" data-aos="fade-up">
+            <div class="trip-context-details">
+              <span id="contextDestinationChip" class="context-chip">All Destinations</span>
+              <span id="contextDatesChip" class="context-chip">3 nights</span>
+              <span id="contextGuestsChip" class="context-chip">2 Guests &middot; 1 Room</span>
+              <span id="contextPromoChip" class="context-chip is-promo" hidden></span>
+            </div>
+            <div class="context-actions">
+              <button type="button" id="clearPromoBtn" class="btn btn-ghost btn-sm" hidden>
+                Remove Promo
+              </button>
+              <a href="#top" class="btn btn-secondary btn-sm">Adjust Dates</a>
+            </div>
+          </div>
+
+          <!-- Filter & Sort Toolbar -->
+          <div class="hotel-toolbar" data-aos="fade-up" data-aos-delay="80">
+            <div class="toolbar-group">
+              <label for="hotelDestinationFilter" class="toolbar-label">Destination</label>
+              <select id="hotelDestinationFilter" class="toolbar-select">
+                <option value="all">All Destinations (8)</option>
+              </select>
+            </div>
+
+            <div class="toolbar-group">
+              <label for="priceRangeFilter" class="toolbar-label">
+                <span>Max Nightly Rate</span>
+                <strong id="priceRangeLabel">Up to $800/night</strong>
+              </label>
+              <input
+                type="range"
+                id="priceRangeFilter"
+                class="price-range-slider"
+                min="200"
+                max="800"
+                step="20"
+                value="800"
+              />
+            </div>
+
+            <div class="toolbar-group">
+              <span class="toolbar-label">Minimum Rating</span>
+              <div id="ratingFilters" class="rating-pills" role="group" aria-label="Minimum hotel rating">
+                <button type="button" class="rating-pill is-active" data-rating="0">Any</button>
+                <button type="button" class="rating-pill" data-rating="4.5">4.5+</button>
+                <button type="button" class="rating-pill" data-rating="4.7">4.7+</button>
+                <button type="button" class="rating-pill" data-rating="4.85">4.85+</button>
+              </div>
+            </div>
+
+            <div class="toolbar-group">
+              <label for="hotelSortSelect" class="toolbar-label">Sort By</label>
+              <select id="hotelSortSelect" class="toolbar-select">
+                <option value="recommended">Recommended</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Highest Rated</option>
+                <option value="reviews-desc">Most Reviewed</option>
+              </select>
+            </div>
+
+            <div class="toolbar-reset-wrap">
+              <button type="button" id="resetFiltersBtn" class="btn btn-secondary">
+                Reset Filters
+              </button>
+            </div>
+          </div>
+
+          <div class="results-summary-row">
+            <span id="hotelsResultCount">Showing 12 of 12 curated stays</span>
+            <span style="font-size: 0.84rem;">Estimates include 12% taxes &amp; fees</span>
+          </div>
+
+          <div id="hotelsGrid" class="hotels-grid"></div>
+        </div>
+      </section>
+
+      <!-- Special Offers -->
+      <section id="offers" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div>
+              <span class="section-eyebrow">Special Offers</span>
+              <h2 class="section-title">Member privileges &amp; seasonal codes</h2>
+              <p class="section-subtitle">
+                Copy any promo code or apply it directly to recalculate all live hotel estimates across the page.
+              </p>
+            </div>
+          </div>
+
+          <div id="offersGrid" class="offers-grid"></div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section id="why-us" class="section section-alt">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div>
+              <span class="section-eyebrow">Why Choose Solara</span>
+              <h2 class="section-title">Designed around calm, transparent travel</h2>
+              <p class="section-subtitle">
+                Every booking experience combines editorial property vetting with real-time pricing clarity.
+              </p>
+            </div>
+          </div>
+
+          <div id="whyChooseGrid" class="why-grid"></div>
+
+          <div class="trust-strip" data-aos="fade-up" data-aos-delay="100">
+            <div class="trust-stat">
+              <strong>12,400+</strong>
+              <span>Verified Boutique Stays Booked</span>
+            </div>
+            <div class="trust-stat">
+              <strong>4.92 / 5</strong>
+              <span>Average Traveler Satisfaction Score</span>
+            </div>
+            <div class="trust-stat">
+              <strong>100%</strong>
+              <span>Upfront Tax &amp; Fee Transparency</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section id="testimonials" class="section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div>
+              <span class="section-eyebrow">Traveler Stories</span>
+              <h2 class="section-title">Notes from recent check-outs</h2>
+              <p class="section-subtitle">
+                Verified reflections from guests who planned coastal escapes, alpine breaks, and cultural journeys with Solara.
+              </p>
+            </div>
+
+            <div class="slider-controls">
+              <button
+                type="button"
+                id="testimonialPrevBtn"
+                class="slider-arrow-btn"
+                aria-label="Previous testimonials"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                id="testimonialNextBtn"
+                class="slider-arrow-btn"
+                aria-label="Next testimonials"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="slider-viewport" data-aos="fade-up" data-aos-delay="80">
+            <div id="testimonialTrack" class="testimonial-track" aria-live="polite"></div>
+          </div>
+
+          <div id="testimonialDots" class="slider-dots" role="group" aria-label="Testimonial slider pagination"></div>
+        </div>
+      </section>
+
+      <!-- Newsletter Subscription -->
+      <section id="newsletter" class="section section-alt">
+        <div class="container">
+          <div class="newsletter-box" data-aos="fade-up">
+            <div class="newsletter-copy">
+              <span class="section-eyebrow">The Solara Dispatch</span>
+              <h2 class="section-title">First access to private seasonal rates</h2>
+              <p>
+                Receive one thoughtful weekly note featuring newly vetted openings, off-peak coastal guides, and subscriber-only promo codes.
+              </p>
+            </div>
+
+            <form id="newsletterForm" class="newsletter-form" novalidate>
+              <label for="newsletterInterest" class="sr-only">Preferred Travel Style</label>
+              <select id="newsletterInterest" class="newsletter-select">
+                <option value="all">All Curated Collections</option>
+                <option value="coastal">Coastal &amp; Island Sanctuaries</option>
+                <option value="alpine">Alpine Chalets &amp; Wellness</option>
+                <option value="cultural">Heritage Cities &amp; Riads</option>
+              </select>
+
+              <div class="newsletter-input-row">
+                <label for="newsletterEmail" class="sr-only">Email Address</label>
+                <input
+                  type="email"
+                  id="newsletterEmail"
+                  class="newsletter-input"
+                  placeholder="Enter your email address"
+                  autocomplete="email"
+                />
+                <button type="submit" id="newsletterSubmitBtn" class="btn btn-accent">
+                  Subscribe
+                </button>
+              </div>
+
+              <label class="newsletter-consent">
+                <input type="checkbox" id="newsletterConsent" />
+                <span>I agree to receive curated travel guides and seasonal promo offers from Solara.</span>
+              </label>
+
+              <div
+                id="newsletterFeedback"
+                class="newsletter-feedback"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         Footer
+         =================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#top" class="brand-logo" style="color: #ffffff;">
+              <span class="brand-mark" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                </svg>
+              </span>
+              <span>Solara</span>
+            </a>
+            <p>
+              Curated boutique stays across 8 iconic landscapes, built for unhurried travelers who value design, warmth, and transparent pricing.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Explore</h3>
+            <ul class="footer-links">
+              <li><a href="#destinations">Popular Destinations</a></li>
+              <li><a href="#hotels">Featured Hotels</a></li>
+              <li><a href="#offers">Seasonal Offers</a></li>
+              <li><a href="#testimonials">Guest Reviews</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guest Care</h3>
+            <ul class="footer-links">
+              <li><a href="#why-us">48h Free Date Changes</a></li>
+              <li><a href="#why-us">Price Transparency</a></li>
+              <li><a href="#offers">How Coupons Apply</a></li>
+              <li><a href="#newsletter">Join The Dispatch</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Concierge Desk</h3>
+            <ul class="footer-links">
+              <li><span>concierge@solaraescapes.com</span></li>
+              <li><span>+41 44 580 24 90</span></li>
+              <li><span>Zurich &middot; Kyoto &middot; Lisbon</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>&copy; 2026 Solara Escapes. Frontend Travel Booking Showcase.</span>
+          <a href="#top" class="btn btn-ghost btn-sm" style="color: #ffffff;">Back to top &uarr;</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================================================================
+         Saved Wishlist Drawer (LocalStorage)
+         =================================================================== -->
+    <div id="wishlistBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <aside
+      id="wishlistDrawer"
+      class="wishlist-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="wishlistDrawerTitle"
+      aria-hidden="true"
+    >
+      <div class="drawer-header">
+        <h2 id="wishlistDrawerTitle">Saved Stays</h2>
+        <button type="button" id="wishlistCloseBtn" class="close-icon-btn" aria-label="Close wishlist">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div id="wishlistItems" class="drawer-body"></div>
+
+      <div class="drawer-footer">
+        <button type="button" id="wishlistClearBtn" class="btn btn-ghost btn-sm">
+          Clear Wishlist
+        </button>
+        <a href="#hotels" id="wishlistExploreBtn" class="btn btn-primary btn-sm">
+          Browse Hotels
+        </a>
+      </div>
+    </aside>
+
+    <!-- ===================================================================
+         Booking Price Estimator Modal
+         =================================================================== -->
+    <div id="estimatorBackdrop" class="modal-backdrop" aria-hidden="true"></div>
+    <section
+      id="estimatorModal"
+      class="estimator-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="estimatorModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-header">
+        <h2 id="estimatorModalTitle">Booking Price Estimator</h2>
+        <button type="button" id="estimatorCloseBtn" class="close-icon-btn" aria-label="Close price estimator">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div id="estimatorHotelSummary" class="modal-hotel-summary"></div>
+
+        <div class="modal-controls-grid">
+          <div class="modal-field">
+            <label for="modalCheckIn">Check-in Date</label>
+            <input type="date" id="modalCheckIn" />
+          </div>
+          <div class="modal-field">
+            <label for="modalCheckOut">Check-out Date</label>
+            <input type="date" id="modalCheckOut" />
+          </div>
+          <div class="modal-field">
+            <label for="modalRooms">Rooms</label>
+            <select id="modalRooms">
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+              <option value="4">4 Rooms</option>
+            </select>
+          </div>
+          <div class="modal-field">
+            <label for="modalAdults">Adults &amp; Children</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <select id="modalAdults" aria-label="Adults count">
+                <option value="1">1 Adult</option>
+                <option value="2">2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+                <option value="5">5 Adults</option>
+                <option value="6">6 Adults</option>
+              </select>
+              <select id="modalChildren" aria-label="Children count">
+                <option value="0">0 Children</option>
+                <option value="1">1 Child</option>
+                <option value="2">2 Children</option>
+                <option value="3">3 Children</option>
+                <option value="4">4 Children</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-field">
+          <label for="modalCouponInput">Promo Code (e.g. SOLARA15, EARLY20, WEEKEND10, LUXE150)</label>
+          <div class="modal-coupon-row">
+            <input
+              type="text"
+              id="modalCouponInput"
+              placeholder="Enter promo code"
+              style="text-transform: uppercase;"
+            />
+            <button type="button" id="modalApplyCouponBtn" class="btn btn-secondary">
+              Apply Code
+            </button>
+          </div>
+          <span id="modalCouponNote" style="font-size: 0.82rem; color: var(--ink-secondary);"></span>
+        </div>
+
+        <div id="modalDateError" class="newsletter-feedback is-error" hidden style="color: var(--status-danger); background: var(--status-danger-soft); border-color: var(--status-danger);"></div>
+
+        <div id="modalBreakdown" class="breakdown-card"></div>
+
+        <div
+          id="modalConfirmFeedback"
+          class="newsletter-feedback is-success"
+          hidden
+          style="color: var(--status-success); background: var(--status-success-soft); border-color: var(--status-success);"
+        ></div>
+      </div>
+
+      <div class="modal-footer">
+        <span style="font-size: 0.82rem; color: var(--ink-muted);">
+          Free cancellation up to 48 hours before check-in
+        </span>
+        <button type="button" id="modalSaveEstimateBtn" class="btn btn-primary">
+          Save Trip Estimate
+        </button>
+      </div>
+    </section>
+
+    <!-- Toast Region -->
+    <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
